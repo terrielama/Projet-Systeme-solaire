@@ -83,7 +83,6 @@ const float rayon[NB_ASTRE] = {
 
 
 
-
 //boucle infinie
   int main(int argc, char ** argv) {
     if (!gl4duwCreateWindow(argc, argv,
@@ -95,7 +94,7 @@ const float rayon[NB_ASTRE] = {
 
       return 1;
     }
-    /* Pour forcer la désactivation de la synchronisation verticale */
+    //forcer la désactivation de la synchronisation verticale 
     SDL_GL_SetSwapInterval(0);
     init();
 
@@ -108,7 +107,6 @@ const float rayon[NB_ASTRE] = {
     gl4duwMainLoop();
     return 0;
   }
-
 
 
 //donnee des surface
@@ -151,7 +149,7 @@ void init(void) {
   _mercure = pop();
   _soleil = pop();
 
-  //On libere notre surface
+  //Liberation de la surface
   atexit(quit);
 }
 
@@ -391,7 +389,7 @@ void quit(void) {
     _neptune = NULL;
     _orbite = NULL;
   }
-  /* libère tous les objets produits par GL4Dummies, ici
-   * principalement les screen */
+  //libèration de tous les objets produits par GL4Dummies
+  
   gl4duClean(GL4DU_ALL);
 }
