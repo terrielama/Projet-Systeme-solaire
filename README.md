@@ -1,5 +1,5 @@
 
-**planetes modélisé:**
+**planetes modélisés:**
 - Terre
 -  Mercure
 - Venus
