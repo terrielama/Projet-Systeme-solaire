@@ -8,7 +8,7 @@
  */
 
 
-#include <assert.h>
+ #include <assert.h>
 #include "moteur.h"
 #include <stdio.h>
 #include <GL4D/gl4dp.h>
@@ -328,9 +328,10 @@ void draw(void) {
       angle = 0;
       angleDeLalune += var_lune;
     }
-    /* déclarer qu'on a changé (en bas niveau) des pixels du screen  */
+   
     gl4dpScreenHasChanged();
-    /* fonction permettant de raffraîchir l'ensemble de la fenêtre*/
+   
+    //fonction permettant de raffraîchir toutes les fenêtres
     gl4dpUpdateScreen(NULL);
 
   }
@@ -338,23 +339,23 @@ void draw(void) {
 
 void key(int keycode) {
   switch (keycode) {
-    //Accelere le temps
-  case GL4DK_KP_PLUS:
+    //la touche r (rapide) pour Accelere le temps
+  case GL4DK_r:
     var_a += 0.01f;
     var_angle += 0.001f;
     var_lune += 0.002f;
     break;
-    //Decelere le temps
-  case GL4DK_KP_MINUS:
+    //la touche l (lent) pour Decelere le temps
+  case GL4DK_l:
     var_a -= 0.01f;
     var_angle -= 0.001f;
     var_lune -= 0.002f;
     break;
-    //Pour pouvoir se rapprocher de 0 sur l'axe x
+    //Pour  se rapprocher de 0 sur l'axe x
   case GL4DK_UP:
     var_x -= 1.0f;
     break;
-    //Pour pouvoir se s'éloigner de 0 sur l'axe x
+    //Pour s'éloigner de 0 sur l'axe x
   case GL4DK_DOWN:
     var_x += 1.0f;
     break;
@@ -366,7 +367,97 @@ void key(int keycode) {
   case GL4DK_RIGHT:
     var_z -= 1.0f;
     break;
+    
+        //Place la caméra devant le Soleil
+  case GL4DK_a:
+    stop = 1;
+    vue_orbite = 0;
+    var_x = 30.0f;
+    var_y = 0.0f;
+    var_z = 0.0f;
+    break;
 
+ //Place la caméra devant Mercure
+  case GL4DK_b:
+    stop = 1;
+    vue_orbite = 0;
+   var_x = 21.0f;
+    var_y = 0.0f;
+    var_z = 8.0f;
+    break;
+    //Place la caméra devant Venus
+  case GL4DK_c:
+    stop = 1;
+    vue_orbite = 0;
+    var_x = 20.0f;
+    var_y = 0.0f;
+    var_z = -12.0f;
+    break;
+    //Place la caméra devant la Terre et la Lune
+  case GL4DK_d:
+    stop = 1;
+    vue_orbite = 0;
+    var_x = -0.0f;
+    var_y = 0.0f;
+    var_z = 35.0f;
+    break;
+    //Place la caméra devant Mars
+  case GL4DK_e:
+    stop = 1;
+    vue_orbite = 0;
+    var_x = 33.0f;
+    var_y = 0.0f;
+    var_z = 27.0f;
+    break;
+    //Place la caméra devant Jupiter
+  case GL4DK_f:
+    stop = 1;
+    vue_orbite = 0;
+    var_x = 50.0f;
+    var_y = 0.0f;
+    var_z = -75.0f;
+    break;
+    //Place la caméra Saturne et le Disque de Saturne
+  case GL4DK_g:
+    stop = 1;
+    vue_orbite = 0;
+    var_x = 65.0f;
+    var_y = 1.0f;
+    var_z = 75.0f;
+    break;
+    //Place la caméra devant Uranus
+  case GL4DK_h:
+    stop = 1;
+    vue_orbite = 0;
+    var_x = -70.0f;
+    var_y = 0.0f;
+    var_z = 45.0f;
+    break;
+    //Place la caméra devant Neptune
+  case GL4DK_i:
+    stop = 1;
+    vue_orbite = 0;
+    var_x = 60.0f;
+    var_y = 0.0f;
+    var_z = -70.0f;
+    break;
+    //Pour pouvoir voir les orbites des Astres sur un plan orthogonal
+  case GL4DK_j:
+    stop = 0;
+    vue_orbite = !vue_orbite;
+    var_x = 3.0f;
+    var_y = 190.0f;
+    var_z = 0.0f;
+    break;
+    //Place la caméra sur un point de vue 
+  case GL4DK_k:
+    stop = 0;
+    vue_orbite = 0;
+    var_x = 120.0f;
+    var_y = 15.0f;
+    var_z = 5.0f;
+    break;
+    
 }
 }
 
