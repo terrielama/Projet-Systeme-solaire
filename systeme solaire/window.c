@@ -1,3 +1,13 @@
+/*!\file window.c
+ * \brief Utilisation du raster "maison" pour finaliser le pipeline de
+ * rendu 3D. Ici on peut voir les géométries disponibles.
+ * \author Farès BELHADJ, amsi@up8.edu
+ * \date December 4, 2020.
+ * \todo pour les étudiant(e)s : changer la variation de l'angle de
+ * rotation pour qu'il soit dépendant du temps et non du framerate
+ */
+
+
 #include <assert.h>
 #include "moteur.h"
 #include <stdio.h>
