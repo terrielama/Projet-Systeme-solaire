@@ -9,3 +9,7 @@
 - Uranus
 - Neptune
 
+**Execution:**
+- make
+- ./systeme_solaire
+
