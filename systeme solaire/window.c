@@ -368,7 +368,7 @@ void key(int keycode) {
     var_z -= 1.0f;
     break;
     
-        //Place la caméra devant le Soleil
+        //La touche a permet de mettre la caméra devant le Soleil
   case GL4DK_a:
     stop = 1;
     vue_orbite = 0;
@@ -377,7 +377,7 @@ void key(int keycode) {
     var_z = 0.0f;
     break;
 
- //Place la caméra devant Mercure
+ //PLa touche b permet de mettre la caméra devant Mercure
   case GL4DK_b:
     stop = 1;
     vue_orbite = 0;
@@ -385,7 +385,7 @@ void key(int keycode) {
     var_y = 0.0f;
     var_z = 8.0f;
     break;
-    //Place la caméra devant Venus
+    //La touche c permet de mettre la caméra devant Venus
   case GL4DK_c:
     stop = 1;
     vue_orbite = 0;
@@ -393,7 +393,7 @@ void key(int keycode) {
     var_y = 0.0f;
     var_z = -12.0f;
     break;
-    //Place la caméra devant la Terre et la Lune
+    //La touche d permet de mettre la caméra devant la Terre et la Lune
   case GL4DK_d:
     stop = 1;
     vue_orbite = 0;
@@ -401,7 +401,7 @@ void key(int keycode) {
     var_y = 0.0f;
     var_z = 35.0f;
     break;
-    //Place la caméra devant Mars
+    //La touche e permet de mettre la caméra devant Mars
   case GL4DK_e:
     stop = 1;
     vue_orbite = 0;
@@ -409,7 +409,7 @@ void key(int keycode) {
     var_y = 0.0f;
     var_z = 27.0f;
     break;
-    //Place la caméra devant Jupiter
+    //La touche f permet de mettre la caméra devant Jupiter
   case GL4DK_f:
     stop = 1;
     vue_orbite = 0;
@@ -417,7 +417,7 @@ void key(int keycode) {
     var_y = 0.0f;
     var_z = -75.0f;
     break;
-    //Place la caméra Saturne et le Disque de Saturne
+    //La touche g permet de mettre la caméra Saturne et le Disque de Saturne
   case GL4DK_g:
     stop = 1;
     vue_orbite = 0;
@@ -425,7 +425,7 @@ void key(int keycode) {
     var_y = 1.0f;
     var_z = 75.0f;
     break;
-    //Place la caméra devant Uranus
+    //La touche h permet de mettrela caméra devant Uranus
   case GL4DK_h:
     stop = 1;
     vue_orbite = 0;
@@ -433,7 +433,7 @@ void key(int keycode) {
     var_y = 0.0f;
     var_z = 45.0f;
     break;
-    //Place la caméra devant Neptune
+    //La touche i permet de mettre la caméra devant Neptune
   case GL4DK_i:
     stop = 1;
     vue_orbite = 0;
@@ -441,7 +441,7 @@ void key(int keycode) {
     var_y = 0.0f;
     var_z = -70.0f;
     break;
-    //Pour pouvoir voir les orbites des Astres sur un plan orthogonal
+    //La touche a permet de  voir l'orbites des Astres 
   case GL4DK_j:
     stop = 0;
     vue_orbite = !vue_orbite;
@@ -449,7 +449,7 @@ void key(int keycode) {
     var_y = 190.0f;
     var_z = 0.0f;
     break;
-    //Place la caméra sur un point de vue 
+    //La touche a permet de mettre la caméra sur un point de vue 
   case GL4DK_k:
     stop = 0;
     vue_orbite = 0;
